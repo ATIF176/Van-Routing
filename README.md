@@ -27,7 +27,7 @@ git clone https://github.com/ATIF176/Van-Routing.git
 > **python manage.py createsuperuser**
 ### Run the development server:
 > **python manage.py runserver**
-### The application will now be available at ** http://localhost:8000.**
+### The application will now be available at http://localhost:8000.
 
 ## Usage
 To use Van Tracking, open your web browser and go to http://localhost:8000. From there, you will see and/or trace vans.
