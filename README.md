@@ -3,11 +3,11 @@ Hi there, I'm Mohammad Dillawar👋
 Welcome to Van Tracking! This is a web application built with Django that will help to trace your van.👋
 
 ## Table of Contents
-- **Features**
+* **Features**
 * **Installation**
 * **Usage**
 * **Contributing**
-* **License**
+
 ## Features
 Users will trace van by selecting a correct one in to the application.
 Users can also reserve a seat for his transport.
