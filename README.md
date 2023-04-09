@@ -18,7 +18,7 @@ To get started with Meetup Planner, you need to have Python and pip installed on
 Clone this repository:
 git clone https://github.com/ATIF176/Van-Routing.git
 ### Navigate to the project directory:
-> **cd meetup-planner**
+> **cd routing**
 ### Install the required packages:
 > **pip install -r requirements.txt**
 ### Apply the database migrations:
