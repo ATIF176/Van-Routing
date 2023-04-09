@@ -3,20 +3,20 @@ Hi there, I'm Mohammad Dillawar👋
 Welcome to Van Tracking! This is a web application built with Django that will help to trace your van.👋
 
 ## Table of Contents
-Features
-Installation
-Usage
-Contributing
-License
-Features
-Users can sign up and log in to the application.
-Users can join and register for meetups.
-Users can view a list of all upcoming meetups.
-Installation
+- Features
+* Installation
++ Usage
++ Contributing
++ License
++ Features
+Users will trace van by selecting a correct one in to the application.
+Users can also reserve a seat for his transport.
+Users can view a list of all available institutes.
+## Installation
 To get started with Meetup Planner, you need to have Python and pip installed on your system. Then, follow these steps:
 
 Clone this repository:
-git clone https://github.com/aaltamashzaheer/Meetup-Planner-Using-Django-Framework
+git clone https://github.com/ATIF176/Van-Routing
 Navigate to the project directory:
 cd meetup-planner
 Install the required packages:
