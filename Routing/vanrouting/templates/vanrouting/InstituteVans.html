@@ -1,0 +1,22 @@
+{% extends 'vanrouting/base/base.html' %}
+{% load static %}
+
+
+{% block title %}van{% endblock %}
+
+{% block site_css %}
+<link rel="stylesheet" href="{% static 'vanrouting/styles/institutes.css' %}">
+{% endblock %}
+
+{% block body %}
+<div class="main-institutes">
+    {% for van in vans %}
+        {% if van.van_id == institute.institute_id %}
+        <section class="institues">
+            {% include 'vanrouting/includes/vaninfo.html' with image=van.van_image.url van=van.van_name current=van.current destination=van.destination slug=van.van_slug email=institue.institute_email %}
+        </section>
+        {% endif %}
+    {% endfor %}
+</div>
+{% endblock %}
+{% block footer %} Developed by: Mohammad Dillawar {% endblock %}

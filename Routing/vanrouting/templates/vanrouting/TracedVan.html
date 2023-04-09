@@ -1,0 +1,29 @@
+{% extends 'vanrouting/base/base.html' %}
+
+{% load static %}
+
+
+{% block title %}Your van Traced!{% endblock %}
+
+{% block site_css %}
+<link rel="stylesheet" href="{% static 'vanrouting/styles/TracedVan.css' %}">
+{% endblock %}
+
+{% block main_heading %} {{ institute.institute_name }} {% endblock %}
+{% block header_content %}Zafarwal Road{% endblock %}
+
+{% block body %}
+<section class="vehicle-information">
+  <div class="info-card">
+    <img src="{{ van.van_image.url }}" alt="{{ van.van_no }}">
+    <div class="info">
+      <h4>Driver: {{ van.driver_name }}</h4>
+      <h4>Contact: {{ van.driver_con }}</h4>
+      <h4>Current Point: {{ van.current }}</h4>
+      <h4>Destination Point: {{ van.destination }}</h4>
+      <h4>Van No: {{ van.van_no }}</h4>
+    </div>
+  </div>
+</section>
+{% endblock %}
+

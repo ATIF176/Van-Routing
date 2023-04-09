@@ -1,0 +1,107 @@
+/* Mobile-first responsive design */
+/* Base styles */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #333;
+}
+
+.main-body {
+    margin-top: 10px;
+}
+
+/* For large screens */
+@media only screen and (min-width: 992px) {
+    .main-institutes {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .institutes {
+        box-shadow: 0px 0px 10px rgb(66, 103, 223);
+        width: 43%;
+        margin: 10px;
+    }
+
+
+    .institute-card {
+        display: flex;
+        flex-direction: row;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .institute-card img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .institute-details {
+        display: flex;
+        flex-direction: column;
+        padding: 8px;
+    }
+
+
+}
+
+/* For small screens */
+@media only screen and (max-width: 991px) {
+    .main-institutes {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .institutes {
+        box-shadow: 0px 0px 10px rgb(66, 103, 223);
+        width: 90%;
+        margin: 10px;
+    }
+
+
+    .institute-card {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .institute-card img {
+        width: auto;
+        height: 200px;
+    }
+
+    .institute-details {
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+    }
+
+}
+
+section {
+    margin-bottom: 0.5em;
+    padding: 1em;
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
+.footer {
+    margin-bottom: 0;
+    background-color: rgb(154, 234, 240);
+    text-align: center;
+}
+
+/* Styles for screens larger than 768px */
+@media (min-width: 768px) {
+    body {
+        font-size: 18px;
+    }
+
+    section {
+        margin-bottom: 2em;
+        padding: 2em;
+    }
+}

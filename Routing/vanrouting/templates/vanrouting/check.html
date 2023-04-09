@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+/* Mobile-first responsive design */
+/* Base styles */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #333;
+}
+
+.main-body {
+    margin-top: 10px;
+}
+
+/* For large screens */
+@media only screen and (min-width: 992px) {
+    .main-institutes {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .institutes {
+        box-shadow: 0px 0px 20px rgb(66, 103, 223);
+        width: 43%;
+        margin: 10px;
+    }
+
+
+    .institute-card {
+        display: flex;
+        flex-direction: row;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .institute-card img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .institute-details {
+        display: flex;
+        flex-direction: column;
+        padding: 8px;
+    }
+
+
+}
+
+/* For small screens */
+@media only screen and (max-width: 991px) {
+    .main-institutes {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .institutes {
+        box-shadow: -1px 4px 9px black;
+        width: 90%;
+        margin: 10px;
+    }
+
+
+    .institute-card {
+        display: flex;
+        flex-direction: row;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .institute-card img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .institute-details {
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+    }
+
+}
+
+section {
+    margin-bottom: 0.5em;
+    padding: 1em;
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
+.footer {
+    margin-bottom: 0;
+    background-color: rgb(154, 234, 240);
+    text-align: center;
+}
+
+/* Styles for screens larger than 768px */
+@media (min-width: 768px) {
+    body {
+        font-size: 18px;
+    }
+
+    section {
+        margin-bottom: 2em;
+        padding: 2em;
+    }
+}
+  </style>
+</head>
+
+<body>
+  {% extends 'vanrouting/base/base.html' %}
+
+  {% load static %}
+
+
+  {% block title %}Your van Traced!{% endblock %}
+
+  {% block site_css %}
+  <link rel="stylesheet" href="{% static 'vanrouting/styles/TracedVan.css' %}">
+  {% endblock %}
+
+  {% block main_heading %} Al-Shifa Institute {% endblock %}
+  {% block header_content %}Zafarwal Road{% endblock %}
+
+  {% block body %}
+  <section class="vehicle-information">
+    <div class="info-card">
+      <img src="./base/un_new_ens7G9I.jpg" alt="{{ van.van_no }}">
+      <div class="info">
+        <h4>Driver: {{ van.driver_name }}</h4>
+        <h4>Contact: {{ van.driver_con }}</h4>
+        <h4>Current Point: {{ van.current }}</h4>
+        <h4>Destination Point: {{ van.destination }}</h4>
+        <h4>Van No: {{ van.van_no }}</h4>
+      </div>
+    </div>
+  </section>
+  {% endblock %}
+  <script>
+    // const navbarToggle = document.querySelector('.navbar-toggle');
+    // const navbarLinks = document.querySelector('.navbar-links');
+    // const navbarSearchForm = document.querySelector('.navbar-search form');
+    // const navbarSearchInput = document.querySelector('.navbar-search input[type="text"]');
+    // const navbarToggle = document.querySelector('.navbar-toggle');
+    // const navbarLinks = document.querySelector('.navbar-links');
+
+    navbarToggle.addEventListener('click', () => {
+      navbarToggle.classList.toggle('active');
+      navbarLinks.classList.toggle('active');
+    });
+
+    window.addEventListener('resize', function () {
+      if (window.innerWidth > 768) {
+        navbarToggle.classList.remove('active');
+        navbarLinks.classList.remove('active');
+      }
+    });
+
+    navbarSearchForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const searchTerm = navbarSearchInput.value;
+      // Do something with search term, such as redirect to search results page
+      console.log(`You searched for "${searchTerm}"`);
+      navbarSearchInput.value = ''; // Clear search field after submission
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.main-heading {
+  background-color: rgb(154, 234, 240);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#main-logo {
+  margin-top: 5px;
+  font-size: larger;
+}
+
+/* Links */
+a {
+  color: #990e6f;
+  text-decoration: none;
+}
+
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Lists */
+ul,
+ol {
+  list-style: none;
+  margin-bottom: 1em;
+}
+
+/* Form elements */
+input,
+textarea,
+button,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.btn {
+  color: white;
+  background-color: rgb(136, 182, 252);
+  cursor: pointer;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background-color: rgb(139, 170, 216);
+}
+
+/* Responsive layout */
+@media (max-width: 767px) {
+  body {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 1.5em;
+    text-shadow: 2px 2px black;
+    color: #ffffff;
+  }
+
+  h2 {
+    font-size: 1.25em;
+  }
+}
